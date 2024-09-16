@@ -51,6 +51,10 @@ class TicTacToe:
 
         return False
 
+    def encode_position(self):
+        mapping = {'X': 1, 'O': -1, ' ': 0}
+        return [mapping[spot] for spot in self.board]
+
 
 def play(game, x_player, o_player, print_game=True):
     if print_game:
